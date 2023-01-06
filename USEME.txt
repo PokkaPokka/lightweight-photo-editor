@@ -1,0 +1,18 @@
+- The upper area of the program shows the histogram of the current photo;
+
+- The left area serves the purpose of changing the greyscales of the image and you can also undo your
+   editing here;
+
+- The area in the middle shows the imgae you are editing;
+
+- The right area is the toobar, which you can change the exposure of the image, flip the image, 
+   blur/sharpen the image, set Sepia-tone for the image, and load/save the image (downscaling
+   and partial editing are incomplete);
+	- If you click +5, the photo will be brightened by 5, or vise versa;
+	- The flip has two option, one is horiontal flipping and the other one is vertical flipping;
+	- You can choose to click blur and the sharpen button to blur/sharpen the image;
+	- If you click the sepia button the photo will be applied to a sepia filter;
+	- Down scaling is incomplete so it won't respond;
+	- Partial Editing is incompelete so it won't respond;
+	- Click load to import image from the system explorer and click save to write image to the
+	   system explorer
