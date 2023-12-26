@@ -125,13 +125,13 @@ public class HistogramView extends JPanel {
 
     for (int i = 0; i < lastModel.getPixelColor().length; i++) {
       for (int j = 0; j < lastModel.getPixelColor()[0].length; j++) {
-        if (color.equalsIgnoreCase("blue")) {
+        if ("blue".equalsIgnoreCase(color)) {
           returnArr[lastModel.getPixelColor()[i][j].getBlue()]++;
-        } else if (color.equalsIgnoreCase("red")) {
+        } else if ("red".equalsIgnoreCase(color)) {
           returnArr[lastModel.getPixelColor()[i][j].getRed()]++;
-        } else if (color.equalsIgnoreCase("green")) {
+        } else if ("green".equalsIgnoreCase(color)) {
           returnArr[lastModel.getPixelColor()[i][j].getGreen()]++;
-        } else if (color.equalsIgnoreCase("intensity")) {
+        } else if ("intensity".equalsIgnoreCase(color)) {
           returnArr[(lastModel.getPixelColor()[i][j].getBlue()
                   + lastModel.getPixelColor()[i][j].getRed()
                   + lastModel.getPixelColor()[i][j].getGreen()) / 3]++;

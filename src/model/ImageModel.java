@@ -118,7 +118,7 @@ public class ImageModel extends Component implements ImageProcessor {
     Color[][] image;
 
 
-    if (userInput.equalsIgnoreCase("sepia")) {
+    if ("sepia".equalsIgnoreCase(userInput)) {
       for (int i = 0; i < pixelColor.length; i++) {
         for (int j = 0; j < pixelColor[0].length; j++) {
           r = (int) (pixelColor[i][j].getRed() * 0.393 + 0.769 * pixelColor[i][j].getGreen()
@@ -141,7 +141,7 @@ public class ImageModel extends Component implements ImageProcessor {
       }
       return new ImageModel(holder, maxValue, filename);
 
-    } else if (userInput.equals("blur")) {
+    } else if ("blur".equals(userInput)) {
       kernel = new double[3][3];
       for (int a = 0; a < kernel.length; a++) {
         for (int b = 0; b < kernel[a].length; b++) {
@@ -155,7 +155,7 @@ public class ImageModel extends Component implements ImageProcessor {
         }
       }
 
-    } else if (userInput.equals("sharpening")) {
+    } else if ("sharpening".equals(userInput)) {
       kernel = new double[5][5];
       for (int a = 0; a < kernel.length; a++) {
         for (int b = 0; b < kernel[a].length; b++) {
@@ -537,7 +537,7 @@ public class ImageModel extends Component implements ImageProcessor {
     String token;
 
     token = sc.next();
-    if (!token.equals("P3")) {
+    if (!"P3".equals(token)) {
       throw new IllegalArgumentException("Invalid PPM file: plain RAW file should begin with P3");
     }
     int width = sc.nextInt();
