@@ -87,7 +87,7 @@ public class ImageControllerImpl implements ImageController {
             if (processor.getName().equals(filename)) {
               isInList = true;
               image = processor;
-              if (userInput.equals("brighten")) {
+              if ("brighten".equals(userInput)) {
                 imageEdited = image.exposure(Math.abs(value), editedName);
               } else {
                 imageEdited = image.exposure(-1 * Math.abs(value), editedName);
@@ -128,9 +128,9 @@ public class ImageControllerImpl implements ImageController {
             if (processor.getName().equals(filename)) {
               isInList = true;
               image = processor;
-              if (userInput.equals("vertical-flip")) {
+              if ("vertical-flip".equals(userInput)) {
                 imageEdited = image.flipping(false, editedName);
-              } else if (userInput.equals("horizontal-flip")) {
+              } else if ("horizontal-flip".equals(userInput)) {
                 imageEdited = image.flipping(true, editedName);
               } else {
                 imageEdited = image.convertTo(userInput, editedName);
