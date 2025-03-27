@@ -1,4 +1,5 @@
 
+import io.github.pixee.security.BoundedLineReader;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -54,7 +55,7 @@ public class ImageUtil {
             String line;
             String inputSum = "";
 
-            while ((line = br.readLine()) != null) {
+            while ((line = BoundedLineReader.readLine(br, 5_000_000)) != null) {
               inputSum = inputSum.concat(line) + "\n";
             }
 
